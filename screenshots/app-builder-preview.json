@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Packwright",
+      "hasCanvas": false,
+      "bodyTextLen": 537,
+      "bodyTextHash": "f75077d725c15dc3cc5cd8c6b1a2c4b03d0efdead7624976c664b556b6fff3ab",
+      "bodyTextPrefix": "Packwright BEDROCK ONLY ADDON SMITH An AI that only speaks Bedro",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Packwright",
+      "hasCanvas": false,
+      "bodyTextLen": 524,
+      "bodyTextHash": "d47a5af9ff12ad918481763eedf5da8d97fc1c0491f4bd2cf627aa254ea93fc0",
+      "bodyTextPrefix": "Packwright ADDON SMITH An AI that only speaks Bedrock. Smith for",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
