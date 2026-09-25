@@ -208,3 +208,45 @@ export const STARTER_PROMPTS = [
   "Give me a loot table that drops 0–2 custom gems from a custom ore.",
   "How do I declare @minecraft/server 2.0.0 in a behavior pack manifest?",
 ];
+
+export const WORLD_AND_ADDON_PATTERNS = [
+  {
+    project: "Z480-fly/sakura-underworld-dimension",
+    pattern: "Custom dimension from a prebuilt world",
+    lesson:
+      "Bedrock custom dimensions are void-only, so you can carry a real map into a custom dimension by extracting the world into .mcstructure tiles, placing them at runtime, and recording the tile list in a script. Persist placement state with a world dynamic property so the terrain remains after reload. This is a strong pattern for large, custom, story-driven dimensions.",
+  },
+  {
+    project: "Z480-fly/unstable-underworld-bedrock",
+    pattern: "Procedural world generation exported as an .mcworld",
+    lesson:
+      "A custom Bedrock world can be built as a ZIP archive with level.dat and db/ LevelDB data. To keep mobile performance high, keep the world compact, omit unnecessary blocks, store only non-empty subchunks, and reduce entity/ticking noise. Deterministic world generation and block-palette validation are essential for stable exports.",
+  },
+  {
+    project: "Z480-fly/Diamond-Apple-Addon",
+    pattern: "Custom food item with script-powered effects",
+    lesson:
+      "A custom item can be a regular BP item JSON with `minecraft:food`, `minecraft:use_modifiers`, and a custom script component registered through `@minecraft/server`. The script can add status effects in `onConsume`; pair it with a shaped recipe and a matching resource pack icon and lang entry to make the result feel native.",
+  },
+  {
+    project: "Z480-fly/shale-quiet-brave-light",
+    pattern: "A practical addon project with a working pack layout",
+    lesson:
+      "When shipping a Minecraft project, keep the manifest + assets + scripts + lang files organized and consistent. Use a clean BP/RP structure, match identifiers across all JSON files, and validate that icons, recipes, and custom logic all line up before shipping. This is a good reference for addon hygiene and pack readability.",
+  },
+  {
+    project: "General Bedrock pattern",
+    pattern: "Large custom content needs Beta API + runtime checks",
+    lesson:
+      "Custom dimensions and script APIs rely on Beta APIs and a world reload. If a custom dimension or custom item fails silently, inspect the manifest, script module entries, item identifiers, and whether the world has experiment flags enabled. This pattern repeats across many non-vanilla packs.",
+  },
+];
+
+export const OPERATIONAL_CHECKLIST = [
+  "Match namespace identifiers across BP, RP, recipes, lang keys, and scripts.",
+  "Use `minecraft:` only for vanilla elements; custom content stays in your namespace.",
+  "Validate manifest UUIDs, module types, min_engine_version, and Beta API requirements before building.",
+  "When a world is custom-generated or imported, keep block counts, palettes, and persistence rules deterministic.",
+  "For custom items and dimensions, test the world reload and experiment-toggle path before claiming it works.",
+  "If a texture is missing, check `item_texture.json` and the lang key before assuming the script is broken.",
+];
