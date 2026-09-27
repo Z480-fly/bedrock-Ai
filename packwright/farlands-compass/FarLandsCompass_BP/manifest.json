@@ -1,0 +1,30 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Far Lands Compass",
+    "description": "Two navigation compasses that point to the Far Lands in Overworld and Nether.",
+    "uuid": "a7c3e91f-4b2d-4e8a-9f1c-6d5e8b3a2c7f",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "b8d4f0a2-5c3e-4f9b-a0d2-7e6f9c4b3d8a",
+      "version": [1, 0, 0]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "c9e5a1b3-6d4f-5a0c-b1e3-8f7a0d5c4e9b",
+      "version": [1, 0, 0],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.17.0"
+    }
+  ]
+}
